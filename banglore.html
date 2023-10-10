@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <style>
+    .card {
+      width: 260px;
+      height: 260px;
+      margin: 50px 0 0 0;
+    }
+
+    .object {
+      width: 250px;
+      height: 250px;
+      background: slategrey;
+      display: none;
+      /We have to check this display = block or none so, Must give this attribute/
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <div class="card"> <!-- Optional div -->
+      <div class="object" id="object"></div>
+    </div>
+    <button id="togglebtn" onclick="toggleHide()">SHOW</button>
+  </center>
+  <script>
+    const object = document.getElementById("object")
+    const btn = document.getElementById("togglebtn")
+
+    function toggleHide() {
+      if (object.style.display == "block") {
+        object.style.display = "none"; // Hide object
+        btn.innerText = 'SHOW'; // Change text in button 
+      } else {
+        object.style.display = "block"; // Un Hide object
+        btn.innerText = 'HIDE'; // Change text in button 
+      }
+    }
+    //========= Use this code when, if the object display = block ==========
+    //    if (object.style.display == "none") {
+    //      object.style.display = "block"; // Un Hide object
+    //      btn.innerText = 'HIDE'; // Change text in button 
+    //    } else {
+    //      object.style.display = "none"; // Hide object
+    //      btn.innerText = 'SHOW'; // Change text in button 
+    //    }
+  </script>
+</body>
+
+</html>

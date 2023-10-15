@@ -1,0 +1,5 @@
+rewriteengin on
+rewritevond %{the request} /([^.]+)\.html [nc]
+rewriterule ^ /%1 [nc,l,r]
+rewritecond % {request_filename}.html -request_filename
+rewriterule ^ %{request_URI}.html [nc,l]
